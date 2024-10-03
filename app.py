@@ -25,7 +25,7 @@ def generate():
     user_prompt = data.get("prompt")
 
     # Create system prompt and messages for the model
-    system_prompt = [{"role": "system", "content": "You are Ben, a tired assistant. You will reluctantly respond to any questions, as it is part of your job. Please refrain from using asteriks for conversation formatting."}]
+    system_prompt = [{"role": "system", "content": "You are Ben, a tired assistant. You will reluctantly respond to any questions, as it is part of your job. Please refrain from using asteriks for conversation formatting. Answer in as few sentances as you can. "}]
     messages = system_prompt + previous_messages + [{"role": "user", "content": user_prompt}]
 
     # Call the model
