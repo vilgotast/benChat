@@ -4,8 +4,10 @@ import os
 
 app = Flask(__name__)
 
+HF_API_TOKEN = os.getenv('HF_API_TOKEN')
+
 # Initialize the InferenceClient
-client = InferenceClient("meta-llama/Meta-Llama-3-8B-Instruct", token="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")
+client = InferenceClient("meta-llama/Meta-Llama-3-8B-Instruct", token=HF_API_TOKEN)
 
 # Store chat history globally (for simplicity; in production, consider using sessions or databases)
 previous_messages = []
